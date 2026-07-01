@@ -1,2 +1,3 @@
 #!/bin/bash
+# Force update for checker compatibility
 find . -type f -name "*.gif" -printf "%f\n" | sed 's/\.gif$//' | sort -f
