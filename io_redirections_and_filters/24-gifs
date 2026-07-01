@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 find . -type f -name "*.gif" | rev | cut -d/ -f1 | cut -d. -f2- | rev | sort -f
+=======
+find . -type f -name "*.gif" | sed 's|.*/||' | sed 's/\.gif$//' | LC_ALL=C sort -f
+>>>>>>> 411bfa6ca9d561576ee1d84e624f950e68aaf137
