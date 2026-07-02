@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -e 'print(join(q(),reverse(map{substr(q(bestchol),$_%length(q(bestchol)),1)}map{$n=int($_/length(q(bestchol)));$_%length(q(bestchol))}unpack(q(N*),pack(q(Q>),eval(join(q(+),map{my$i=0;map{$n=$n*length(shift@_)+index(shift@_,$_)}split//,$_}(split//,$ENV{WATER}x0||$ENV{WATER},split//,$ENV{STIR}x0||$ENV{STIR})))))ne""?():())))'
+printf "%o\n" "$((5#$(echo "$WATER" | tr water 01234) + 5#$(echo "$STIR" | tr "stir." 01234)))" | tr 01234567 bestchol
