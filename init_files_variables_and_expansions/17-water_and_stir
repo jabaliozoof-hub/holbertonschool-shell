@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -e 'sub b{$s=shift;$b=shift;for(split//,$s){$n=$n*length($b)+index($b,$_)}return $n}sub t{$n=shift;$b=shift;return $n<1?$b:t(int($n/length($b)),$b).substr($b,$n%length($b),1)}print t(b($ENV{WATER},"water")+b($ENV{STIR},"stir"),"bestchol")'
+perl -e 'print(join(q(),reverse(map{substr(q(bestchol),$_%length(q(bestchol)),1)}map{$n=int($_/length(q(bestchol)));$_%length(q(bestchol))}unpack(q(N*),pack(q(Q>),eval(join(q(+),map{my$i=0;map{$n=$n*length(shift@_)+index(shift@_,$_)}split//,$_}(split//,$ENV{WATER}x0||$ENV{WATER},split//,$ENV{STIR}x0||$ENV{STIR})))))ne""?():())))'
