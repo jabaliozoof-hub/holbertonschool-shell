@@ -1,0 +1,2 @@
+#!/bin/bash
+perl -e 'sub b{$s=shift;$b=shift;for(split//,$s){$n=$n*length($b)+index($b,$_)}return $n}sub t{$n=shift;$b=shift;return $n<1?$b:t(int($n/length($b)),$b).substr($b,$n%length($b),1)}print t(b($ENV{WATER},"water")+b($ENV{STIR},"stir"),"bestchol")'
