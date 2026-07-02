@@ -1,2 +1,3 @@
 #!/bin/bash
-echo $PATH | awk -F: '{print NF}'
+tmp=${PATH//[^:]/}
+echo $((${#tmp} + 1))
