@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -e 'sub b{$s=shift; $d=shift; $n=0; map{$n=$n*length($d)+index($d,$_)}split//,$s; $n} $r=b($ENV{WATER},"water")+b($ENV{STIR},"stir"); $b="bestchol"; $o=""; do{$o=substr($b,$r%length($b),1).$o; $r=int($r/length($b))}while($r>0); print $o'
+perl -e 'sub v{my($s,$b)=@_;my$n=0;map{$n=$n*length($b)+index($b,$_)}split//,$s;$n}sub t{my($n,$b)=@_;my$o=q();do{$o=substr($b,$n%length($b),1).$o;$n=int($n/length($b))}while$n;print$o}t(v($ENV{WATER},q(water))+v($ENV{STIR},q(stir)),q(bestchol))'
