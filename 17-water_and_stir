@@ -1,0 +1,2 @@
+#!/bin/bash
+perl -e 'sub b{$s=shift; $d=shift; $n=0; map{$n=$n*length($d)+index($d,$_)}split//,$s; $n} $r=b($ENV{WATER},"water")+b($ENV{STIR},"stir"); $b="bestchol"; $o=""; do{$o=substr($b,$r%length($b),1).$o; $r=int($r/length($b))}while($r>0); print $o'
